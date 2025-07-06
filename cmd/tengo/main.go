@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/d5/tengo/v2"
-	"github.com/d5/tengo/v2/parser"
-	"github.com/d5/tengo/v2/stdlib"
+	"github.com/mew-sh/tengo/v2"
+	"github.com/mew-sh/tengo/v2/parser"
+	"github.com/mew-sh/tengo/v2/stdlib"
 )
 
 const (
