@@ -150,15 +150,15 @@ func (p *Parser) ParseFile() (file *File, err error) {
 	}
 
 	var nass [][]string
-	for i := 0; i < len(stmts); i += 1 {
+	for i := 0; i < len(stmts); i++ {
 		nas := regexFindAll(stmts[i].String(), "[A-Za-z][a-zA-Z0-9]*(_[a-zA-Z0-9]+)*\\s*[:()]")
 		nass = append(nass, nas)
 	}
-	for i := 0; i < len(nass); i += 1 {
-		for j := 0; j < len(nass[i]); j += 1 {
+	for i := 0; i < len(nass); i++ {
+		for j := 0; j < len(nass[i]); j++ {
 			i1 := i + 1
 			bdo := false
-			for ; i1 < len(nass); i1 += 1 {
+			for ; i1 < len(nass); i1++ {
 				if len(nass[i1]) > 0 && strings.HasSuffix(nass[i1][0], ":") && strings.HasSuffix(nass[i][j], "(") && nass[i1][0][:len(nass[i1][0])-1] == nass[i][j][:len(nass[i][j])-1] {
 					nass = AppendManyNew(nass[:i], nass[i1], nass[i:i1], nass[i1+1:])
 					stmts = AppendManyNew(stmts[:i], stmts[i1], stmts[i:i1], stmts[i1+1:])
@@ -167,7 +167,7 @@ func (p *Parser) ParseFile() (file *File, err error) {
 				}
 			}
 			if bdo {
-				i -= 1
+				i--
 				break
 			}
 		}

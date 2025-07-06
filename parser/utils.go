@@ -5,12 +5,13 @@ import (
 	"regexp"
 )
 
+// AppendManyNew creates a new slice by appending multiple values or slices.
 func AppendManyNew[T any](v []T, as ...any) []T {
 	l := len(v)
 	for _, a := range as {
 		switch a := a.(type) {
 		case T:
-			l += 1
+			l++
 		case []T:
 			l += len(a)
 		default:
