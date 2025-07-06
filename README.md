@@ -136,6 +136,8 @@ fmt.Println(res) // "success"
 
 ## References
 
+This project is forked from [https://github.com/d5/tengo](https://github.com/d5/tengo).
+
 - [Language Syntax](https://github.com/mew-sh/tengo/blob/master/docs/tutorial.md)
 - [Object Types](https://github.com/mew-sh/tengo/blob/master/docs/objects.md)
 - [Runtime Types](https://github.com/mew-sh/tengo/blob/master/docs/runtime-types.md)
